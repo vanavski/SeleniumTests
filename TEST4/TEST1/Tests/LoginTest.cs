@@ -3,53 +3,20 @@
 namespace TEST1.Tests
 {
     [TestFixture]
-    class LoginTest : AuthBase
+    class LoginTest : TestBase
     {
         [Test]
         public void Login()
         {
-
-            Assert.IsTrue(app.auth.Test_LogIn(account), "Login exception");
+            Assert.IsTrue(app.auth.Test_LogIn(new AccountData(Settings.Login, Settings.Password)), "Login exception");
             app.auth.Test_Logout();
         }
 
         [Test]
         public void WrongLogin()
         {
-            Assert.IsTrue(app.auth.Test_LogIn(new AccountData(account.Username + "1", account.Password)), "Login exception");
+            Assert.IsFalse(app.auth.Test_LogIn(new AccountData(Settings.Login + "1", Settings.Password)), "Login exception");
             app.auth.Test_Logout();
-        }
-
-        [Test]
-        public void AddElement()
-        {
-            SetupLogin();
-            Assert.IsTrue(app.element.Test_AddElement(), "Add element exception");
-            app.auth.Test_Logout();
-        }
-
-        [Test]
-        public void EditElement()
-        {
-            try
-            {
-                SetupLogin();
-                app.element.Test_AddElement();
-                Assert.IsTrue(app.element.Test_EditElement(), "Edit element exception");
-                app.auth.Test_Logout();
-            }
-            catch
-            {
-                app.auth.Test_Logout();
-            }
-        }
-
-        [Test]
-        public void Logout()
-        {
-            SetupLogin();
-
-            Assert.IsTrue(app.auth.Test_Logout(), "Logout exception");
         }
     }
 }

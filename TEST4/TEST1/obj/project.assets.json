@@ -5042,11 +5042,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\TESTS\\TEST1\\TEST1\\TEST1.csproj",
+      "projectUniqueName": "D:\\REPOSITORIES\\SeleniumTests\\TEST4\\TEST1\\TEST1.csproj",
       "projectName": "TEST1",
-      "projectPath": "D:\\TESTS\\TEST1\\TEST1\\TEST1.csproj",
+      "projectPath": "D:\\REPOSITORIES\\SeleniumTests\\TEST4\\TEST1\\TEST1.csproj",
       "packagesPath": "C:\\Users\\Vanavski\\.nuget\\packages\\",
-      "outputPath": "D:\\TESTS\\TEST1\\TEST1\\obj\\",
+      "outputPath": "D:\\REPOSITORIES\\SeleniumTests\\TEST4\\TEST1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
